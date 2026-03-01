@@ -31,6 +31,6 @@ print(result1)
 
 # also check the flow i.e the graph
 
-print(chain.get_graph().print_ascii())
+chain.get_graph().print_ascii()
 
 
