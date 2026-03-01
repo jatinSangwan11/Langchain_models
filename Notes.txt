@@ -1,0 +1,49 @@
+PYTHON DICT vs JSON
+
+| Feature         | Python dict      | JSON             |
+| --------------- | ---------------- | ---------------- |
+| Exists as       | in-memory object | text/string      |
+| Quotes          | single or double | **double only**  |
+| Booleans        | `True`, `False`  | `true`, `false`  |
+| Null            | `None`           | `null`           |
+| Trailing commas | allowed          | ❌ not allowed    |
+| Key types       | many types       | **strings only** |
+
+
+Python dict:
+- In-memory Python data structure
+- Exists only while the program runs
+- Keys can be different data types
+- Uses True / False / None
+- Example:
+  {"name": "Jatin", "age": 24}
+
+JSON:
+- Text-based data format
+- Used for APIs, files, network transfer
+- Language independent
+- Keys must be strings
+- Uses true / false / null
+- Example:
+  {"name": "Jatin", "age": 24}
+
+Key Differences:
+- Dict = Python object in memory
+- JSON = string representation
+- Dict supports Python-specific types
+- JSON supports only:
+  object {}, array [], string, number, boolean, null
+
+Validity:
+- [{}, {}]  -> Valid JSON (array of objects)
+- {{}, {}}  -> NOT JSON (sets do not exist in JSON)
+
+Conversion:
+- Python dict -> JSON:
+  json.dumps(data)
+- JSON -> Python dict:
+  json.loads(json_string)
+
+Rule:
+Python dict = runtime object
+JSON = data exchange format
